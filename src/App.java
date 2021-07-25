@@ -97,6 +97,10 @@ public class App {
         throw new NumberFormatException();
       }
 
+      if (input < 0) {
+        throw new NumberFormatException();
+      }
+
       return false;
     } catch (NumberFormatException e) {
       System.out.println("Wrong input! Should be integer from 0 to " + arrayLength + ". You entered: " + userInput);
