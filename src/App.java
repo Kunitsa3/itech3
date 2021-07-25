@@ -91,7 +91,11 @@ public class App {
 
   public static boolean checkUserInput(String userInput, Integer arrayLength, Scanner scanner) {
     try {
-      Integer.parseInt(userInput);
+      Integer input = Integer.parseInt(userInput);
+
+      if (input > arrayLength) {
+        throw new NumberFormatException();
+      }
 
       return false;
     } catch (NumberFormatException e) {
